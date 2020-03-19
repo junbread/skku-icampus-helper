@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "SKKU iCampus Lecture Picker",
+    "description": "Open video files in SKKU iCampus system",
+    "version": "1.0.0",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    }
+}
