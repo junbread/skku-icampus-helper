@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,500);
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+  min-width: 280px;
+  padding: 1rem;
+  margin: 0;
+  background: #F1F1F1;
+}
+
+hr {
+    margin: .5rem 0 .5rem 0;
+}
+
+.msg-error {
+  text-align: center;
+}
+
+#vid-list li:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
