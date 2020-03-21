@@ -1,16 +1,19 @@
 {
     "manifest_version": 2,
-    "name": "SKKU iCampus Lecture Picker",
-    "description": "Open video files in SKKU iCampus system",
+    "name": "SKKU iCampus Helper",
+    "description": "Open video files directly, or download pdf files.",
     "version": "1.0.0",
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "pages/popup.html",
-        "default_title": "iCampus Lecture Picker"
+        "default_title": "iCampus Helper"
     },
     "content_scripts": [ {
         "all_frames": true,
         "js": ["scripts/contentscript.js"],
         "matches": ["*://*.skku.edu/*"]
-    }]
+    }],
+    "permissions": [
+        "downloads", "tabs"
+    ]
 }

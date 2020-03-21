@@ -25,7 +25,12 @@ hr {
   text-align: center;
 }
 
-#vid-list li:hover {
+.resource-list li:hover {
   font-weight: bold;
   cursor: pointer;
+}
+
+button {
+  margin-top: .5rem;
+  padding: .2rem;
 }

@@ -7,11 +7,28 @@
     <link rel="stylesheet" href="../styles/popup.css">
 </head>
 <body>
-    <h2>SKKU iCampus Lecture Picker</h2>
-    <p>Please select a video below</p>
+    <h2>SKKU iCampus Helper</h2>
     <hr>
-    <ul id="vid-list">
-    </ul>
-    <p id="err-no-video" class="msg-error">No videos in this page!</p>
+    <div id="contents">
+        <h3>Contents (강의콘텐츠)</h3>
+        <p id="err-no-contents" class="msg-error">No contents in this page!</p>
+        <ul id="content-list" class="resource-list">
+        </ul>
+        <hr>
+    </div>
+    <div id="resources">
+        <h3>Resources (강의자료실)</h3>
+        <p id="err-no-resources" class="msg-error">No resources in this page!</p>
+        <ul id="resource-list" class="resource-list">
+        </ul>
+        <button id="resource-download-all">Download all</button>
+        <hr>
+    </div>
+<!--
+    <div>
+        <h3>ETC</h3>
+        <button id="boom">BOOM</button>
+    </div>
+-->
 </body>
 </html>
