@@ -11,7 +11,7 @@
 
 ## 설치 방법
 
-1. 페이지 오른쪽의 녹색 `Clone or download` 버튼에 있는 `Download ZIP` 옵션을 선택해 프로젝트를 내려받고 적당한 위치에 압축을 해제합니다.
+1. [Release](https://github.com/JunBread/skku-icampus-lecture-picker/releases) 페이지에서 최신 프로젝트 파일(`skku-icampus-helper-vx.x.x.zip`)을 내려받고 적당한 위치에 압축을 해제합니다.
 2. 크롬 브라우저에서 `설정>도구 더보기>확장 프로그램`을 선택합니다.
 3. 오른쪽 상단의 `개발자 모드`를 활성화합니다.
 4. `압축해제된 확장 프로그램을 로드합니다.` 버튼을 선택합니다.
@@ -20,7 +20,7 @@
 
 ## 사용 방법
 
-* 신 아이캠퍼스([icampus.skku.edu](https://icampus.skku.edu)) 페이지에 접속합니다.
+* 신 아이캠퍼스([icampus.skku.edu](https://icampus.skku.edu)) 사이트에 접속합니다.
 * 강의 자료가 있는 페이지에 접속합니다. (`강의콘텐츠`, `수업자료실`)
 * 확장 프로그램 아이콘을 클릭하면 강의 자료의 목록이 보입니다.
 * 각 항목을 클릭하면 새 탭으로 파일이 열립니다.
