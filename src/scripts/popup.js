@@ -69,18 +69,18 @@ window.onload = () => {
                 document.getElementById(file.id).addEventListener('click', () => {
                     if (file.type.match('movie'))
                         findValidContentsRepository(`${file.id}/contents/media_files/mobile/ssmovie.mp4`, url => {
-                            chrome.tabs.create({ url })
+                            chrome.tabs.create({ url, active: false })
                         })
                     else if (file.type.match('screenlecture'))
                         findValidContentsRepository(`${file.id}/contents/media_files/mixed.mp4`, url => {
-                            chrome.tabs.create({ url })
+                            chrome.tabs.create({ url, active: false })
                         })
                     else if (file.type.match('pdf'))
                         findValidContentsRepository(`${file.id}/contents/web_files/original.pdf`, url => {
-                            chrome.tabs.create({ url })
+                            chrome.tabs.create({ url, active: false })
                         })
                     else
-                        chrome.tabs.create({ url: file.url })
+                        chrome.tabs.create({ url: file.url, active: false })
                 })
             }
 
@@ -111,18 +111,18 @@ window.onload = () => {
                 document.getElementById(file.id).addEventListener('click', () => {
                     if (file.type.match('movie'))
                         findValidContentsRepository(`${file.id}/contents/media_files/mobile/ssmovie.mp4`, url => {
-                            chrome.tabs.create({ url })
+                            chrome.tabs.create({ url, active: false })
                         })
                     else if (file.type.match('screenlecture'))
                         findValidContentsRepository(`${file.id}/contents/media_files/mixed.mp4`, url => {
-                            chrome.tabs.create({ url })
+                            chrome.tabs.create({ url, active: false })
                         })
                     else if (file.type.match('pdf'))
                         findValidContentsRepository(`${file.id}/contents/web_files/original.pdf`, url => {
-                            chrome.tabs.create({ url })
+                            chrome.tabs.create({ url, active: false })
                         })
                     else
-                        chrome.tabs.create({ url: file.url })
+                        chrome.tabs.create({ url: file.url, active: false })
                 })
             })
         }
