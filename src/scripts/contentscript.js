@@ -37,7 +37,7 @@ window.onload = function () {
     function checkMode() {
         if (document.querySelector('[id^=xn-unit')) return 'unit'
         if (document.querySelector('[id^=xn-course')) return 'course'
-        
+
         return 'etc'
     }
 
@@ -52,14 +52,18 @@ window.onload = function () {
                 if (apiToken && courseCode) {
                     makeApiRequest(`https://canvas.skku.edu/learningx/api/v1/courses/${courseCode}/allcomponents_db?user_id=${userId}&user_login=${userLogin}&role=1`, apiToken, text => {
                         let files = JSON.parse(text)
-                        files = files.map(file => {
-                            return {
-                                id: file.commons_content.content_id,
-                                title: file.title,
-                                type: file.commons_content.content_type,
-                                url: file.commons_content.view_url
-                            }
-                        })
+                        files = files
+                            .filter(file => {
+                                return file.hasOwnProperty('commons_content')
+                            })
+                            .map(file => {
+                                return {
+                                    id: file.commons_content.content_id,
+                                    title: file.title,
+                                    type: file.commons_content.content_type,
+                                    url: file.commons_content.view_url
+                                }
+                            })
                         chrome.runtime.sendMessage({ type: 'get-contents', data: files })
                     })
                 }
@@ -69,14 +73,18 @@ window.onload = function () {
                 if (apiToken && courseCode) {
                     makeApiRequest(`https://canvas.skku.edu/learningx/api/v1/courses/${courseCode}/resources_db`, apiToken, text => {
                         let files = JSON.parse(text)
-                        files = files.map(file => {
-                            return {
-                                id: file.commons_content.content_id,
-                                title: file.title,
-                                type: file.commons_content.content_type,
-                                url: file.commons_content.view_url
-                            }
-                        })
+                        files = files
+                            .filter(file => {
+                                return file.hasOwnProperty('commons_content')
+                            })
+                            .map(file => {
+                                return {
+                                    id: file.commons_content.content_id,
+                                    title: file.title,
+                                    type: file.commons_content.content_type,
+                                    url: file.commons_content.view_url
+                                }
+                            })
                         chrome.runtime.sendMessage({ type: 'get-resources', data: files })
                     })
                 }
